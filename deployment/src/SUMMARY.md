@@ -14,6 +14,7 @@
 
 - [RSSHub](rss/rsshub.md)
 - [FreshRSS](rss/freshrss.md)
+- [RSSBot](rss/rssbot.md)
 
 # Privacy
 
