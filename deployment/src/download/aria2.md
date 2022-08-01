@@ -40,9 +40,11 @@ reverse_proxy /jsonrpc aria2:6800 {
 }
 ```
 
-## AriaNG
+## 配套工具
 
-### 下载
+### AriaNG
+
+#### 下载
 
 [Github](https://github.com/mayswind/AriaNg) - [Releases](https://github.com/mayswind/AriaNg/releases)
 
@@ -53,6 +55,45 @@ handle /ariang/* {
     uri strip_prefix /ariang
     root * /srv/ariang/
     file_server
+}
+```
+
+### tele-aria2
+
+#### 下载
+
+[Github](https://github.com/HouCoder/tele-aria2) - [Docker](https://hub.docker.com/r/p3terx/tele-aria2)
+
+#### docker-compose配置
+```yaml
+version: '3'
+services:
+  tele-aria2:
+    container_name: tele-aria2
+    image: p3terx/tele-aria2
+    restart: "no"
+    volumes:
+      - ./config.json:/config.json
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "1"
+networks:
+  default:
+    external: true
+    name: host-network
+```
+
+
+#### config配置
+```json
+{
+  "aria2-server": "http://aria2:6800/jsonrpc",
+  "aria2-key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "proxy": "http://proxy:1087",
+  "bot-key": "1234567890:qwertyuiopqwertyuiopqwertyuiopqwertyuiop",
+  "user-id": "<user-id>",
+  "max-index": 20
 }
 ```
 
