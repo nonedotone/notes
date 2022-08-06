@@ -32,6 +32,11 @@
 - [Aria2](download/aria2.md)
 - [ICloudPD](download/icloudpd.md)
 
+# IM
+
+- [Synapse](instant-messaging/matrix-synapse.md)
+- [Dendrite](instant-messaging/matrix-dendrite.md)
+
 # Proxy
 
 - [V2ray](proxy/v2ray.md)
