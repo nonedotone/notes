@@ -478,3 +478,22 @@ case $input in
         ;;
 esac
 ```
+
+## Caddyfile
+```Caddyfile
+handle /.well-known/matrix/server {
+    respond `{"m.server":"example.com:443"}`
+}
+
+handle /.well-known/matrix/client {
+    respond `{"m.homeserver":{"base_url":"https://example.com"}}`
+}
+
+handle /_matrix/* {
+    reverse_proxy http://dendrite:8008
+}
+
+handle /_synapse/* {
+    reverse_proxy http://dendrite:8008
+}
+```

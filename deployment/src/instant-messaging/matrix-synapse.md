@@ -106,3 +106,28 @@ case $input in
         ;;
 esac
 ```
+
+## Caddyfile
+```Caddyfile
+(matrix-well-known-header) {
+    # Headers
+    header Access-Control-Allow-Origin "*"
+    header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    header Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    header Content-Type "application/json"
+}
+
+
+reverse_proxy /_matrix/* synapse:8008
+reverse_proxy /_synapse/client/* synapse:8008
+
+handle /.well-known/matrix/server {
+    import matrix-well-known-header
+    respond `{"m.server":"example.com:443"}`
+}
+
+handle /.well-known/matrix/client {
+    import matrix-well-known-header
+    respond `{"m.homeserver":{"base_url":"https://example.com"}}`
+}
+```
