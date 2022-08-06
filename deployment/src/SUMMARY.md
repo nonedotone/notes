@@ -22,6 +22,7 @@
 
 # Media
 
+- [Navidrome](media/navidrome.md)
 - [Jellyfin](media/jellyfin.md)
 
 # Privacy
