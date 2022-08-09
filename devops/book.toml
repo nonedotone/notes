@@ -1,0 +1,28 @@
+[book]
+authors = ["nonedotone"]
+language = "en"
+multilingual = false
+src = "src"
+title = "DevOps"
+
+[rust]
+edition = "2018"
+
+[output.html]
+mathjax-support = true
+site-url = "/notes/devops/"
+git-repository-url = "https://github.com/nonedotone/notes/tree/master/devops"
+edit-url-template = "https://github.com/nonedotone/notes/edit/master/devops/{path}"
+
+[output.html.playground]
+editable = true
+line-numbers = true
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2
