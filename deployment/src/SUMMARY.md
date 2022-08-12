@@ -36,6 +36,7 @@
 
 - [Aria2](download/aria2.md)
 - [ICloudPD](download/icloudpd.md)
+- [H5ai](download/h5ai.md)
 
 # IM
 
