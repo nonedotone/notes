@@ -47,3 +47,4 @@
 
 - [V2ray](proxy/v2ray.md)
 - [Shadowsocksr](proxy/shadowsocksr.md)
+- [Frp](proxy/frp.md)
