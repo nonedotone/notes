@@ -13,10 +13,12 @@
 # Note
 
 - [Joplin](note/joplin.md)
+- [Notes](note/notes.md)
 
 # Cloud-Storage
 
 - [Nextcloud](cloud-storage/nextcloud.md)
+- [Aliyundrive](cloud-storage/aliyundrive.md)
 
 # RSS
 
